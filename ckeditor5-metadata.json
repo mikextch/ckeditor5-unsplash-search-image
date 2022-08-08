@@ -1,0 +1,17 @@
+{
+	"plugins": [
+		{
+			"name": "Insert image from Unsplash",
+			"className": "InsertImageUnsplash",
+			"description": "Insert image from unsplash feature CKEditor 5",
+			"path": "src/insertImageUnsplash.js",
+			"uiComponents": [
+				{
+					"name": "insertImageUnsplash",
+					"type": "Button",
+					"iconPath": "theme/icons/buttonicon.svg"
+				}
+			]
+		}
+	]
+}
