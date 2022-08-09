@@ -1,0 +1,148 @@
+/* stylelint-disable */
+.ckmk-box {
+	background-color: #fff;
+	color: #4a4a4a;
+	display: block;
+	padding: 3.25rem;
+}
+
+.ckmk-modal lable {
+	font-weight: bold;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.ckmk-modal input {
+	margin: 0;
+	width: 100%;
+	flex: 1 0 auto;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	text-align: left;
+	line-height: 1.21428571em;
+	padding: 0.67857143em 1em;
+	background: #fff;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.87);
+	border-radius: 0.28571429rem;
+	transition: box-shadow 0.1s ease, border-color 0.1s ease;
+	box-shadow: none;
+}
+
+.ckmk-modal input:focus {
+	border-color: #85b7d9;
+	background: #ffffff;
+	color: rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.ckmk-modal {
+	/* This way it could be display flex or grid or whatever also. */
+	display: block;
+
+	/* Use percentage for a large view */
+	width: 70%;
+	height: 80%;
+	position: fixed;
+	z-index: 501;
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -50%);
+
+	background: white;
+	box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+}
+.ckmk-modal.closed,
+.ckmk-modal-overlay.closed {
+	display: none;
+}
+
+.ckmk-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background: rgba(0, 0, 0, 0.2);
+}
+.ckmk-modal .modal-guts {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.ckmk-close-button {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 28px;
+	height: 28px;
+	opacity: 0.3;
+	z-index: 600;
+}
+.ckmk-close-button:hover {
+	opacity: 1;
+}
+.ckmk-close-button:before,
+.ckmk-close-button:after {
+	position: absolute;
+	left: 15px;
+	content: " ";
+	height: 20px;
+	width: 2px;
+	background-color: #333;
+}
+.ckmk-close-button:before {
+	transform: rotate(45deg);
+}
+.ckmk-close-button:after {
+	transform: rotate(-45deg);
+}
+.ckmk-photo-grid {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px -8px 0px;
+	padding: 0;
+	overflow: auto;
+	height: 70vh;
+}
+
+.ckmk-modal .ckmk-photo-grid::-webkit-scrollbar {
+	display: none;
+}
+
+.ckmk-photo-grid li {
+	height: 20vh;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	margin: 0 8px 8px 0;
+}
+.ckmk-photo-grid li:last-child {
+	-webkit-box-flex: 10;
+	flex-grow: 10;
+}
+.ckmk-photo-grid img {
+	max-height: 100%;
+	min-width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	vertical-align: bottom;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+	.ckmk-box {
+		padding: 3.25rem 1.5rem;
+	}
+
+	.ckmk-modal {
+		width: 95%;
+	}
+}
